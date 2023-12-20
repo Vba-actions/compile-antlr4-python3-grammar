@@ -12,6 +12,6 @@ runs:
   steps:
     - run: |
         python -m pip install antlr4-python3-runtime
-        antlr4 -Dlanguage=Python3 -o deliverables -listener -visitor ${{ inputs.grammar }}
+        python -m antlr4 -Dlanguage=Python3 -o deliverables -listener -visitor ${{ inputs.grammar }}
         ls deliverables
       shell: bash
