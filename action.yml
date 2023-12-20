@@ -11,7 +11,7 @@ runs:
   using: "composite"
   steps:
     - run: |
-        ls -al /home/runner/.local/lib/python3.10/site-packages/antlr4
+        ls -al /home/runner/.local/bin/
         virt/bin/antlr4 -Dlanguage=Python3 -o deliverables -listener -visitor ${{ inputs.grammar }}
         ls deliverables
       shell: bash
