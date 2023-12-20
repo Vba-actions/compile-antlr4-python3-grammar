@@ -11,6 +11,8 @@ runs:
   using: "composite"
   steps:
     - run: |
+        cd /home
+        find -name antlr4*
         antlr4 -Dlanguage=Python3 -o deliverables -listener -visitor ${{ inputs.grammar }}
         ls deliverables
       shell: bash
